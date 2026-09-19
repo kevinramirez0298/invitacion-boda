@@ -1,11 +1,16 @@
-const fechaEvento = new Date("2026-12-15T18:00:00").getTime();
+// ==========================================
+// CONTADOR
+// ==========================================
+
+const fechaEvento = new Date("2026-12-15T18:00:00-05:00").getTime();
 
 function actualizarContador() {
 
-    const ahora = new Date().getTime();
+    const ahora = Date.now();
 
     const diferencia = fechaEvento - ahora;
 
+    // Si ya llegó el día del evento
     if (diferencia <= 0) {
         document.getElementById("dias").textContent = "0";
         document.getElementById("horas").textContent = "0";
@@ -36,11 +41,16 @@ function actualizarContador() {
     document.getElementById("segundos").textContent = segundos;
 }
 
+// Ejecutar inmediatamente
 actualizarContador();
 
+// Actualizar cada segundo
 setInterval(actualizarContador, 1000);
 
-// ABRIR FOTO
+
+// ==========================================
+// GALERÍA DE FOTOS
+// ==========================================
 
 function abrirFoto(foto) {
 
@@ -53,8 +63,6 @@ function abrirFoto(foto) {
 }
 
 
-// CERRAR FOTO
-
 function cerrarFoto() {
 
     const visor = document.getElementById("visorFoto");
@@ -62,16 +70,26 @@ function cerrarFoto() {
     visor.style.display = "none";
 }
 
+
+// ==========================================
+// MÚSICA
+// ==========================================
+
 const musica = document.getElementById("musica");
 const botonMusica = document.getElementById("botonMusica");
 
 function controlarMusica() {
 
     if (musica.paused) {
+
         musica.play();
+
         botonMusica.textContent = "⏸️ Pausar música";
+
     } else {
+
         musica.pause();
+
         botonMusica.textContent = "▶️ Escuchar música";
     }
 }
