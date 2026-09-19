@@ -12,6 +12,16 @@
 
 <body>
 
+   <audio id="musica" loop>
+    <source src="MUSIC/boda.mp3" type="audio/mpeg">
+</audio>
+
+<button id="botonMusica" onclick="controlarMusica()">
+    🎵 Escuchar música
+</button>
+
+</button>
+
     <!-- PORTADA -->
     <header>
         <h1>Kevin & María</h1>
@@ -127,21 +137,27 @@
 
         <p>Cali, Colombia</p>
 
-        <button>Ver ubicación</button>
+        <a 
+    href="https://www.google.com/maps"
+    target="_blank"
+    class="boton"
+>
+    Ver ubicación
+</a>
 
-    </section>
-
-
-    <!-- CONFIRMACIÓN -->
     <section>
+    <h2>¿Nos acompañas?</h2>
 
-        <h2>¿Nos acompañas?</h2>
+    <p>Confirma tu asistencia.</p>
 
-        <p>Confirma tu asistencia.</p>
-
-        <button>Confirmar asistencia</button>
-
-    </section>
+    <a
+        href="https://wa.me/573170639069?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Kevin%20y%20María."
+        target="_blank"
+        class="boton"
+    >
+        Confirmar asistencia
+    </a>
+</section>
 
 
     <!-- PIE DE PÁGINA -->

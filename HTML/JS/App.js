@@ -61,3 +61,17 @@ function cerrarFoto() {
 
     visor.style.display = "none";
 }
+
+const musica = document.getElementById("musica");
+const botonMusica = document.getElementById("botonMusica");
+
+function controlarMusica() {
+
+    if (musica.paused) {
+        musica.play();
+        botonMusica.textContent = "⏸️ Pausar música";
+    } else {
+        musica.pause();
+        botonMusica.textContent = "▶️ Escuchar música";
+    }
+}

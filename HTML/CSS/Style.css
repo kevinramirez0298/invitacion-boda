@@ -77,24 +77,20 @@ header p:last-of-type {
 
 /* BOTONES */
 
-button {
+.boton {
+    display: inline-block;
     border: none;
-
     background-color: #a67c52;
     color: white;
-
     padding: 14px 28px;
-
     border-radius: 30px;
-
     font-size: 16px;
-
+    text-decoration: none;
     cursor: pointer;
-
     transition: 0.3s;
 }
 
-button:hover {
+.boton:hover {
     background-color: #7b5e4b;
     transform: scale(1.05);
 }
@@ -286,5 +282,59 @@ footer p {
 
     font-size: 45px;
 
+    cursor: pointer;
+}
+
+/* VISOR DE FOTO GRANDE */
+
+#visorFoto {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+/* FOTO AMPLIADA */
+
+#fotoGrande {
+    max-width: 90%;
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+/* BOTÓN X */
+
+#visorFoto span {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+/* MANO AL PASAR SOBRE LA FOTO */
+
+.galeria img {
     cursor: pointer;
 }
