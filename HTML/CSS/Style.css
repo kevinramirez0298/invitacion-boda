@@ -192,3 +192,99 @@ footer p {
     font-size: 14px;
     color: #4a3b32;
 }
+/* GALERÍA DE FOTOS */
+
+#galeria {
+    background-color: #f8f3ee;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.galeria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .galeria img {
+        width: 100%;
+        height: 350px;
+    }
+
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.galeria img {
+    cursor: pointer;
+}
+
+/* VISOR DE FOTO GRANDE */
+
+#visorFoto {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+/* FOTO GRANDE */
+
+#fotoGrande {
+    max-width: 90%;
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+/* BOTÓN X */
+
+#visorFoto span {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}

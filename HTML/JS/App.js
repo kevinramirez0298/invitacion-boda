@@ -39,3 +39,25 @@ function actualizarContador() {
 actualizarContador();
 
 setInterval(actualizarContador, 1000);
+
+// ABRIR FOTO
+
+function abrirFoto(foto) {
+
+    const visor = document.getElementById("visorFoto");
+    const fotoGrande = document.getElementById("fotoGrande");
+
+    fotoGrande.src = foto.src;
+
+    visor.style.display = "flex";
+}
+
+
+// CERRAR FOTO
+
+function cerrarFoto() {
+
+    const visor = document.getElementById("visorFoto");
+
+    visor.style.display = "none";
+}
