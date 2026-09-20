@@ -1,16 +1,28 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: #cfcecc;
-    color: #4a3b32;
+html {
+    scroll-behavior: smooth;
 }
 
-/* PORTADA */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f8f3ee;
+    color: #4a3b32;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   PORTADA
+========================================== */
 
 header {
     min-height: 100vh;
@@ -26,8 +38,8 @@ header {
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.40)
         ),
         url("../IMG/pareja.jpg");
 
@@ -38,67 +50,95 @@ header {
     color: white;
 }
 
-/* EFECTO DE ENTRADA */
 
-header {
-    animation: aparecer 1.5s ease-in-out;
-}
+/* Texto pequeño de la portada */
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(1.05);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-header h1 {
-    font-size: 60px;
-    font-weight: normal;
-    color: #7b5e4b;
-    margin-bottom: 10px;
-}
-
-header p:first-of-type {
-    font-size: 28px;
-    color: #a67c52;
+.subtitulo {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     margin-bottom: 25px;
 }
 
-header p:last-of-type {
-    max-width: 600px;
+
+/* Nombres */
+
+header h1 {
+    font-size: 58px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+
+/* Símbolo & */
+
+.ampersand {
+    font-size: 45px;
+    margin: 5px 0;
+}
+
+
+/* Nos casamos */
+
+.frase-boda {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Texto de invitación */
+
+header > p:not(.subtitulo):not(.frase-boda) {
+    max-width: 550px;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-/* BOTONES */
 
+/* ==========================================
+   BOTONES
+========================================== */
+
+button,
 .boton {
-    display: inline-block;
     border: none;
+
     background-color: #a67c52;
+
     color: white;
-    padding: 14px 28px;
+
+    padding: 13px 26px;
+
     border-radius: 30px;
+
     font-size: 16px;
-    text-decoration: none;
+
     cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin: 8px;
+
     transition: 0.3s;
 }
 
+button:hover,
 .boton:hover {
     background-color: #7b5e4b;
     transform: scale(1.05);
 }
 
-/* SECCIONES */
+
+/* ==========================================
+   SECCIONES
+========================================== */
 
 section {
-    max-width: 800px;
+    max-width: 900px;
+
     margin: 0 auto;
 
     padding: 80px 25px;
@@ -108,22 +148,329 @@ section {
 
 section h2 {
     font-size: 36px;
+
     color: #7b5e4b;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 section p {
     font-size: 18px;
-    margin-bottom: 12px;
+
+    margin-bottom: 15px;
 }
 
-/* PIE DE PÁGINA */
+
+/* ==========================================
+   PADRES
+========================================== */
+
+#padres {
+    background-color: #fffaf5;
+}
+
+.padres-contenedor {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    flex-wrap: wrap;
+}
+
+.padres-bloque {
+    min-width: 220px;
+}
+
+.padres-bloque h3 {
+    color: #a67c52;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   MENSAJE
+========================================== */
+
+#mensaje {
+    background-color: #f8f3ee;
+}
+
+#mensaje p {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 19px;
+}
+
+
+/* ==========================================
+   CEREMONIA
+========================================== */
+
+#evento {
+    background-color: #fffaf5;
+}
+
+
+/* ==========================================
+   CELEBRACIÓN
+========================================== */
+
+#celebracion {
+    background-color: #f8f3ee;
+}
+
+
+/* ==========================================
+   ITINERARIO
+========================================== */
+
+#itinerario {
+    background-color: #fffaf5;
+}
+
+.itinerario {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.momento {
+    width: 150px;
+
+    padding: 25px 15px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.momento span {
+    font-size: 35px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.momento h3 {
+    color: #7b5e4b;
+
+    margin-bottom: 5px;
+}
+
+.momento p {
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   CUENTA REGRESIVA
+========================================== */
+
+#contador {
+    background-color: #f8f3ee;
+}
+
+.contador {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.contador div {
+    min-width: 100px;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contador span {
+    display: block;
+
+    font-size: 36px;
+
+    color: #7b5e4b;
+
+    font-weight: bold;
+}
+
+.contador small {
+    font-size: 14px;
+
+    color: #4a3b32;
+}
+
+
+/* ==========================================
+   HISTORIA
+========================================== */
+
+#historia {
+    background-color: #fffaf5;
+}
+
+#historia p {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==========================================
+   GALERÍA
+========================================== */
+
+#galeria {
+    background-color: #f8f3ee;
+}
+
+.galeria {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.galeria img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   VISOR DE FOTO
+========================================== */
+
+#visorFoto {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.9);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+#fotoGrande {
+    max-width: 90vw;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+#visorFoto span {
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   UBICACIÓN
+========================================== */
+
+#ubicacion {
+    background-color: #fffaf5;
+}
+
+
+/* ==========================================
+   CONFIRMACIÓN
+========================================== */
+
+#confirmacion {
+    background-color: #f8f3ee;
+}
+
+
+/* ==========================================
+   MÚSICA
+========================================== */
+
+#botonMusica {
+    background-color: #7b5e4b;
+
+    font-size: 15px;
+
+    padding: 11px 22px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 footer {
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 50px 20px;
 
     background-color: #7b5e4b;
 
@@ -134,19 +481,64 @@ footer p {
     font-size: 18px;
 }
 
-/* CELULARES */
+
+/* ==========================================
+   ANIMACIÓN
+========================================== */
+
+header {
+    animation: aparecer 1.5s ease-in-out;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* ==========================================
+   CELULARES
+========================================== */
 
 @media (max-width: 600px) {
 
+    header {
+        min-height: 100svh;
+
+        padding: 30px 20px;
+    }
+
     header h1 {
         font-size: 42px;
+
+        letter-spacing: 2px;
     }
 
-    header p:first-of-type {
-        font-size: 24px;
+    .ampersand {
+        font-size: 35px;
     }
 
-    header p:last-of-type {
+    .subtitulo {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+    .frase-boda {
+        font-size: 23px;
+    }
+
+    header > p:not(.subtitulo):not(.frase-boda) {
         font-size: 16px;
     }
 
@@ -157,184 +549,71 @@ footer p {
     section h2 {
         font-size: 30px;
     }
-}
-#contador {
-    background-color: #fffaf5;
-}
 
-.contador {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    section p {
+        font-size: 17px;
+    }
 
-.contador div {
-    min-width: 100px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
-.contador span {
-    display: block;
-    font-size: 36px;
-    color: #7b5e4b;
-    font-weight: bold;
-}
+    /* Padres */
 
-.contador small {
-    font-size: 14px;
-    color: #4a3b32;
-}
-/* GALERÍA DE FOTOS */
+    .padres-contenedor {
+        gap: 35px;
+    }
 
-#galeria {
-    background-color: #f8f3ee;
-}
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 900px;
-    margin: 30px auto 0;
-}
+    /* Itinerario */
 
-.galeria img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
+    .itinerario {
+        flex-direction: column;
 
-.galeria img:hover {
-    transform: scale(1.05);
-}
+        align-items: center;
+    }
 
-/* CELULAR */
+    .momento {
+        width: 90%;
 
-@media (max-width: 600px) {
+        max-width: 300px;
+    }
+
+
+    /* Contador */
+
+    .contador {
+        gap: 10px;
+    }
+
+    .contador div {
+        min-width: 75px;
+
+        padding: 15px 10px;
+    }
+
+    .contador span {
+        font-size: 28px;
+    }
+
+
+    /* Galería */
 
     .galeria {
         grid-template-columns: 1fr;
+
         gap: 20px;
     }
 
     .galeria img {
-        width: 100%;
         height: 350px;
     }
 
-}
 
-/* EFECTO AL PASAR EL MOUSE */
+    /* Botones */
 
-.galeria img {
-    cursor: pointer;
-}
+    button,
+    .boton {
+        font-size: 15px;
 
-/* VISOR DE FOTO GRANDE */
+        padding: 12px 22px;
+    }
 
-#visorFoto {
-    display: none;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.9);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 9999;
-
-    padding: 20px;
-}
-
-/* FOTO GRANDE */
-
-#fotoGrande {
-    max-width: 90%;
-    max-height: 90%;
-
-    object-fit: contain;
-
-    border-radius: 10px;
-}
-
-/* BOTÓN X */
-
-#visorFoto span {
-    position: absolute;
-
-    top: 20px;
-    right: 30px;
-
-    color: white;
-
-    font-size: 45px;
-
-    cursor: pointer;
-}
-
-/* VISOR DE FOTO GRANDE */
-
-#visorFoto {
-    display: none;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.9);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 9999;
-
-    padding: 20px;
-}
-
-/* FOTO AMPLIADA */
-
-#fotoGrande {
-    max-width: 90%;
-    max-height: 90%;
-
-    object-fit: contain;
-
-    border-radius: 10px;
-}
-
-/* BOTÓN X */
-
-#visorFoto span {
-    position: absolute;
-
-    top: 20px;
-    right: 30px;
-
-    color: white;
-
-    font-size: 45px;
-
-    cursor: pointer;
-}
-
-/* MANO AL PASAR SOBRE LA FOTO */
-
-.galeria img {
-    cursor: pointer;
 }

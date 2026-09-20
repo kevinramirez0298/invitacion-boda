@@ -1,18 +1,53 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="CSS/Style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Invitación | Kevin & María</title>
+    <title>Invitación de Boda</title>
+
+    <link rel="stylesheet" href="CSS/Style.css">
 </head>
 
 <body>
 
-   <audio id="musica" loop>
+    <!-- =====================================
+         PORTADA
+    ====================================== -->
+
+    <header id="inicio">
+
+        <p class="subtitulo">Nuestra boda</p>
+
+        <h1 id="nombreNovio"></h1>
+
+<div class="ampersand">&</div>
+
+<h1 id="nombreNovia"></h1>
+
+        <p class="frase-boda">
+            Nos casamos 💍
+        </p>
+
+        <p>
+            Tenemos el placer de invitarte
+            a celebrar este momento tan especial
+            con nosotros.
+        </p>
+
+        <button onclick="document.getElementById('evento').scrollIntoView({ behavior: 'smooth' })">
+            Ver invitación
+        </button>
+
+        <a href="personalizar.html" class="boton">
+        💍 Crear mi invitación
+        </a>
+
+<!-- =====================================
+         MÚSICA
+    ====================================== -->
+        <audio id="musica" loop>
     <source src="MUSIC/boda.mp3" type="audio/mpeg">
 </audio>
 
@@ -20,33 +55,212 @@
     🎵 Escuchar música
 </button>
 
-</button>
-
-    <!-- PORTADA -->
-    <header>
-        <h1>Kevin & María</h1>
-
-        <p>Nos casamos 💍</p>
-
-        <p>Tenemos el placer de invitarte a celebrar
-            este momento tan especial con nosotros.</p>
-
-        <button onclick="document.getElementById('evento').scrollIntoView({ behavior: 'smooth' })">
-    Ver invitación
-</button>
     </header>
 
 
-    <!-- INFORMACIÓN DEL EVENTO -->
-    <section id="evento">
+    <!-- =====================================
+         PADRES
+    ====================================== -->
 
-        <h2>El gran día</h2>
+    <section id="padres">
 
-        <p>📅 15 de diciembre de 2026</p>
+        <h2>Con la bendición de nuestros padres</h2>
 
-        <p>⏰ 6:00 PM</p>
+        <div class="padres-contenedor">
 
-        <p>📍 Cali, Colombia</p>
+            <div class="padres-bloque">
+
+    <h3>Padres del novio</h3>
+
+    <p id="padreNovio"></p>
+    <p id="madreNovio"></p>
+
+</div>
+
+
+            <div class="padres-bloque">
+
+    <h3>Padres de la novia</h3>
+
+    <p id="padreNovia"></p>
+    <p id="madreNovia"></p>
+
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         MENSAJE
+    ====================================== -->
+
+    <section id="mensaje">
+
+        <h2>Un día muy especial ❤️</h2>
+
+        <p>
+            Hay momentos en la vida que merecen ser celebrados
+            y queremos compartir este día tan especial contigo.
+        </p>
+
+        <p>
+            Después de compartir sueños, aventuras y muchos momentos
+            juntos, hemos decidido dar un paso muy importante
+            en nuestras vidas.
+        </p>
+
+        <p>
+            Nos encantaría contar con tu presencia para celebrar
+            nuestro amor y comenzar juntos esta nueva etapa.
+        </p>
+
+    </section>
+
+
+    <!-- CEREMONIA -->
+<section id="evento">
+
+    <h2>⛪ Ceremonia</h2>
+
+    <p>
+        <strong>Capilla:</strong>
+        <span id="capillaBoda"></span>
+    </p>
+
+    <p>
+        📅 <strong>Fecha:</strong>
+        <span id="fechaBoda"></span>
+    </p>
+
+    <p>
+        ⏰ <strong>Hora:</strong>
+        <span id="horaCeremoniaBoda"></span>
+    </p>
+
+    <p>
+        📍 <strong>Dirección:</strong>
+        <span id="direccionBoda"></span>
+    </p>
+
+    <a id="mapaCeremonia"
+       href="#"
+       target="_blank"
+       class="boton">
+        Ver ubicación
+    </a>
+
+</section>
+
+
+    <!-- CELEBRACIÓN -->
+<section id="celebracion">
+
+    <h2>🥂 Celebración</h2>
+
+    <p>
+        <strong>Lugar:</strong>
+        <span id="lugarCelebracionBoda"></span>
+    </p>
+
+    <p>
+        📅 <strong>Fecha:</strong>
+        <span id="fechaCelebracionBoda"></span>
+    </p>
+
+    <p>
+        ⏰ <strong>Hora:</strong>
+        <span id="horaCelebracionBoda"></span>
+    </p>
+
+    <p>
+        📍 <strong>Dirección:</strong>
+        <span id="direccionCelebracionBoda"></span>
+    </p>
+
+    <a id="mapaCelebracion"
+       href="#"
+       target="_blank"
+       class="boton">
+        Ver ubicación
+    </a>
+
+</section>
+
+
+    <!-- =====================================
+         ITINERARIO
+    ====================================== -->
+
+    <section id="itinerario">
+
+        <h2>📋 Itinerario</h2>
+
+        <div class="itinerario">
+
+            <div class="momento">
+
+                <span>⛪</span>
+
+                <h3>Ceremonia</h3>
+
+                <p>6:00 PM</p>
+
+            </div>
+
+
+            <div class="momento">
+
+                <span>📸</span>
+
+                <h3>Sesión de fotos</h3>
+
+                <p>7:00 PM</p>
+
+            </div>
+
+
+            <div class="momento">
+
+                <span>🥂</span>
+
+                <h3>Recepción</h3>
+
+                <p>7:30 PM</p>
+
+            </div>
+
+
+            <div class="momento">
+
+                <span>🍽️</span>
+
+                <h3>Cena</h3>
+
+                <p>8:30 PM</p>
+
+            </div>
+
+
+            <div class="momento">
+
+                <span>💃</span>
+
+                <h3>Celebración</h3>
+
+                <p>9:30 PM</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CUENTA REGRESIVA
+    ====================================== -->
 
     <section id="contador">
 
@@ -76,100 +290,171 @@
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+    <!-- =====================================
+         NUESTRA HISTORIA
+    ====================================== -->
+
+    <section id="historia">
+
+        <h2>Nuestra historia ❤️</h2>
+
+        <p>
+            Todo comenzó con un encuentro que cambió nuestras vidas.
+            Desde entonces hemos compartido momentos, sueños,
+            alegrías y muchos recuerdos.
+        </p>
+
+        <p>
+            Hoy queremos dar un paso muy especial y celebrar
+            nuestro amor junto a las personas que más queremos.
+        </p>
+
+        <p>
+            Gracias por acompañarnos en este día tan importante.
+        </p>
 
     </section>
 
 
-   <!-- MENSAJE -->
-<section>
+    <!-- =====================================
+         GALERÍA
+    ====================================== -->
 
-    <h2>Un día especial</h2>
+    <section id="galeria">
 
-    <p>
-        Queremos compartir contigo uno de los momentos
-        más importantes de nuestras vidas.
-    </p>
+        <h2>Nuestros momentos ❤️</h2>
 
-</section>
+        <p>
+            Algunos momentos que queremos compartir contigo.
+        </p>
+
+        <div class="galeria">
+
+         <img id="fotoGaleria1"
+         src="IMG/pareja1.jpg"
+         alt="Foto de la pareja 1"
+         onclick="abrirFoto(this)">
+
+         <img id="fotoGaleria2"
+         src="IMG/pareja2.jpg"
+         alt="Foto de la pareja 2"
+         onclick="abrirFoto(this)">
+
+        <img id="fotoGaleria3"
+         src="IMG/pareja3.jpg"
+         alt="Foto de la pareja 3"
+         onclick="abrirFoto(this)">
+
+        <img id="fotoGaleria4"
+         src="IMG/pareja4.jpg"
+         alt="Foto de la pareja 4"
+         onclick="abrirFoto(this)">
+
+        <img id="fotoGaleria5"
+         src="IMG/pareja5.jpg"
+         alt="Foto de la pareja 5"
+         onclick="abrirFoto(this)">
+
+        </div>
+
+    </section>
 
 
-<!-- GALERÍA -->
-<section id="galeria">
+    <!-- =====================================
+         VISOR DE FOTOS
+    ====================================== -->
 
-    <h2>Nuestra historia ❤️</h2>
+    <div id="visorFoto" onclick="cerrarFoto()">
 
-    <p>Algunos momentos que queremos compartir contigo.</p>
+        <span>&times;</span>
 
-    <div class="galeria">
-
-        <img src="IMG/pareja1.jpg" alt="Foto de la pareja 1" onclick="abrirFoto(this)">
-
-        <img src="IMG/pareja2.jpg" alt="Foto de la pareja 2" onclick="abrirFoto(this)">
-
-        <img src="IMG/pareja3.jpg" alt="Foto de la pareja 3" onclick="abrirFoto(this)">
-
-        <img src="IMG/pareja4.jpg" alt="Foto de la pareja 4" onclick="abrirFoto(this)">
-
-        <img src="IMG/pareja5.jpg" alt="Foto de la pareja 5" onclick="abrirFoto(this)">
+        <img
+            id="fotoGrande"
+            src=""
+            alt="Foto ampliada">
 
     </div>
 
-</section>
 
-<!-- FOTO GRANDE -->
-<div id="visorFoto" onclick="cerrarFoto()">
+    <!-- =====================================
+         UBICACIÓN
+    ====================================== -->
 
-    <span>&times;</span>
+    <section id="ubicacion">
 
-    <img id="fotoGrande" src="" alt="Foto ampliada">
+        <h2>📍 ¿Dónde será?</h2>
 
-</div>
+        <p>
+            Nombre del lugar
+        </p>
 
-    <!-- UBICACIÓN -->
-    <section>
+        <p>
+            Cali, Colombia
+        </p>
 
-        <h2>¿Dónde será?</h2>
+        <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            class="boton">
+            Ver ubicación
+        </a>
 
-        <p>📍 Salón de eventos</p>
-
-        <p>Cali, Colombia</p>
-
-        <a 
-    href="https://www.google.com/maps"
-    target="_blank"
-    class="boton"
->
-    Ver ubicación
-</a>
-
-    <section>
-    <h2>¿Nos acompañas?</h2>
-
-    <p>Confirma tu asistencia.</p>
-
-    <a
-        href="https://wa.me/573170639069?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Kevin%20y%20María."
-        target="_blank"
-        class="boton"
-    >
-        Confirmar asistencia
-    </a>
-</section>
+    </section>
 
 
-    <!-- PIE DE PÁGINA -->
+    <!-- =====================================
+         CONFIRMACIÓN
+    ====================================== -->
+
+    <section id="confirmacion">
+
+        <h2>¿Nos acompañas? 💌</h2>
+
+        <p>
+            Tu presencia hará que este día sea aún más especial.
+        </p>
+
+        <p>
+            Por favor confirma tu asistencia.
+        </p>
+
+        <a
+            href="https://wa.me/573001234567?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda."
+            target="_blank"
+            class="boton">
+            Confirmar asistencia
+        </a>
+
+    </section>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
 
-        <p>Con cariño, Kevin & María ❤️</p>
+        <p>
+            Con cariño ❤️
+        </p>
+
+        <p>
+            Nombre del Novio & Nombre de la Novia
+        </p>
 
     </footer>
-   
-<script src="JS/App.js"></script>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="JS/App.js"></script>
+
 </body>
 
 </html>
-```
 

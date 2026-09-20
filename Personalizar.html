@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalizar invitación</title>
+
+    <link rel="stylesheet" href="CSS/Style.css">
+
+</head>
+
+<body>
+
+    <section id="personalizar">
+
+        <h1>💍 Personaliza tu invitación</h1>
+
+        <p>
+            Completa los datos de tu boda.
+        </p>
+
+
+        <!-- =====================================
+             NOVIOS
+        ====================================== -->
+
+        <h2>💑 Novios</h2>
+
+        <label>
+            Nombre del novio
+        </label>
+
+        <input
+            type="text"
+            id="novio"
+            placeholder="Nombre del novio">
+
+
+        <label>
+            Nombre de la novia
+        </label>
+
+        <input
+            type="text"
+            id="novia"
+            placeholder="Nombre de la novia">
+
+
+        <!-- =====================================
+             PADRES
+        ====================================== -->
+
+        <h2>💐 Padres</h2>
+
+        <label>
+            Padre del novio
+        </label>
+
+        <input
+            type="text"
+            id="padreNovio"
+            placeholder="Nombre del padre">
+
+
+        <label>
+            Madre del novio
+        </label>
+
+        <input
+            type="text"
+            id="madreNovio"
+            placeholder="Nombre de la madre">
+
+
+        <label>
+            Padre de la novia
+        </label>
+
+        <input
+            type="text"
+            id="padreNovia"
+            placeholder="Nombre del padre">
+
+
+        <label>
+            Madre de la novia
+        </label>
+
+        <input
+            type="text"
+            id="madreNovia"
+            placeholder="Nombre de la madre">
+
+
+        <!-- =====================================
+             CEREMONIA
+        ====================================== -->
+
+        <h2>⛪ Ceremonia</h2>
+
+        <label>
+            Nombre de la capilla
+        </label>
+
+        <input
+            type="text"
+            id="capilla"
+            placeholder="Nombre de la capilla">
+
+
+        <label>
+            Hora de la ceremonia
+        </label>
+
+        <input
+            type="time"
+            id="horaCeremonia">
+
+
+        <label>
+            Dirección de la ceremonia
+        </label>
+
+        <input
+            type="text"
+            id="direccionCeremonia"
+            placeholder="Dirección de la capilla">
+
+
+        <!-- =====================================
+             CELEBRACIÓN
+        ====================================== -->
+
+        <h2>🥂 Celebración</h2>
+
+        <label>
+            Lugar de celebración
+        </label>
+
+        <input
+            type="text"
+            id="lugarCelebracion"
+            placeholder="Nombre del lugar">
+
+
+        <label>
+            Hora de celebración
+        </label>
+
+        <input
+            type="time"
+            id="horaCelebracion">
+
+
+        <label>
+            Dirección de la celebración
+        </label>
+
+        <input
+            type="text"
+            id="direccionCelebracion"
+            placeholder="Dirección del lugar">
+
+
+        <!-- =====================================
+             FECHA
+        ====================================== -->
+
+        <h2>📅 Fecha</h2>
+
+        <label>
+            Fecha de la boda
+        </label>
+
+        <input
+            type="date"
+            id="fecha">
+
+
+        <!-- =====================================
+             UBICACIÓN
+        ====================================== -->
+
+        <h2>📍 Ubicación</h2>
+
+        <label>
+            Ciudad
+        </label>
+
+        <input
+            type="text"
+            id="ciudad"
+            placeholder="Ejemplo: Cali, Colombia">
+
+
+        <!-- =====================================
+             FOTOS
+        ====================================== -->
+
+        <h2>📸 Mis fotos</h2>
+
+        <p>
+            Sube las fotos que quieres utilizar en tu invitación.
+        </p>
+
+
+        <label>
+            Foto principal
+        </label>
+
+        <input
+            type="file"
+            id="fotoPrincipal"
+            accept="image/*">
+
+
+        <label>
+            Fotos de la galería
+        </label>
+
+        <input
+            type="file"
+            id="fotosGaleria"
+            accept="image/*"
+            multiple>
+
+
+        <!-- =====================================
+             GUARDAR
+        ====================================== -->
+
+        <button
+            type="button"
+            onclick="guardarInvitacion()">
+
+            💾 Guardar invitación
+
+        </button>
+
+
+        <!-- =====================================
+             VISTA PREVIA
+        ====================================== -->
+
+        <h2>👀 Vista previa</h2>
+
+        <p>
+            Mira cómo está quedando tu invitación.
+        </p>
+
+
+        <button
+            type="button"
+            onclick="verInvitacion()">
+
+            👀 Ver mi invitación
+
+        </button>
+
+
+        <!-- =====================================
+             VISTA PREVIA DENTRO DE LA PÁGINA
+        ====================================== -->
+
+        <div class="vista-previa">
+
+            <iframe
+                id="vistaPrevia"
+                src="index.html"
+                title="Vista previa de la invitación">
+            </iframe>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="JS/Personalizar.js"></script>
+
+</body>
+
+</html>
