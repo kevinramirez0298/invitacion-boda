@@ -368,3 +368,96 @@ if (datosBoda.fotoGaleria5) {
     document.getElementById("fotoGaleria5").src =
         datosBoda.fotoGaleria5;
 }
+
+// ==========================================
+// MOSTRAR ITINERARIO DE LA BODA
+// ==========================================
+
+function mostrarItinerario() {
+
+```
+// Buscar el contenedor en index.html
+const contenedor = document.getElementById("itinerarioBoda");
+
+// Verificar que exista
+if (!contenedor) {
+    console.warn("No se encontró el contenedor itinerarioBoda");
+    return;
+}
+
+// Actividades predeterminadas de la boda
+const itinerarioPredeterminado = [
+    {
+        icono: "⛪",
+        nombre: "Ceremonia",
+        hora: "18:00",
+        descripcion: "Ceremonia de matrimonio"
+    },
+    {
+        icono: "📸",
+        nombre: "Sesión de fotos",
+        hora: "19:00",
+        descripcion: "Fotografías con familiares e invitados"
+    },
+    {
+        icono: "🥂",
+        nombre: "Recepción",
+        hora: "19:30",
+        descripcion: "Bienvenida a nuestros invitados"
+    },
+    {
+        icono: "🍽️",
+        nombre: "Cena",
+        hora: "20:30",
+        descripcion: "Compartiremos nuestra cena"
+    },
+    {
+        icono: "💃",
+        nombre: "Celebración",
+        hora: "21:30",
+        descripcion: "¡A celebrar nuestro amor!"
+    }
+];
+
+// Usar las actividades personalizadas si existen
+const actividades = Array.isArray(datosBoda.itinerario)
+    && datosBoda.itinerario.length > 0
+    ? datosBoda.itinerario
+    : itinerarioPredeterminado;
+
+// Limpiar el contenedor
+contenedor.replaceChildren();
+
+// Crear cada actividad
+actividades.forEach(function (actividad) {
+
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "momento";
+
+    const icono = document.createElement("span");
+    icono.textContent = actividad.icono || "💍";
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = actividad.nombre || "Actividad";
+
+    const hora = document.createElement("p");
+    hora.textContent = actividad.hora
+        ? formatearHora(actividad.hora)
+        : "";
+
+    const descripcion = document.createElement("p");
+    descripcion.textContent = actividad.descripcion || "";
+
+    tarjeta.append(icono, titulo, hora, descripcion);
+
+    contenedor.appendChild(tarjeta);
+});
+```
+
+}
+
+// ==========================================
+// INICIAR ITINERARIO
+// ==========================================
+
+mostrarItinerario();
