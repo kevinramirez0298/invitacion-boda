@@ -229,17 +229,37 @@
             multiple>
 
 
-        <!-- =====================================
-             GUARDAR
-        ====================================== -->
+        
+<!-- =====================================
+     ITINERARIO DE LA BODA
+====================================== -->
 
-        <button
-            type="button"
-            onclick="guardarInvitacion()">
+<section class="editor-itinerario">
 
-            💾 Guardar invitación
+    <h2>📅 Itinerario de la boda</h2>
 
-        </button>
+    <!-- Aquí aparecerán las actividades editables -->
+    <div id="editorItinerario"></div>
+
+    <!-- Botón para agregar actividades -->
+    <button
+        type="button"
+        onclick="agregarActividad()">
+        ➕ Agregar actividad
+    </button>
+
+</section>
+
+
+<!-- =====================================
+     GUARDAR INVITACIÓN
+====================================== -->
+
+<button
+    type="button"
+    onclick="guardarInvitacion()">
+    💾 Guardar invitación
+</button>
 
 
         <!-- =====================================
