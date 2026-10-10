@@ -17,7 +17,7 @@ const actividadesIniciales = [
 
 function agregarActividad(actividad = {}) {
 
-```
+
 const contenedor = document.getElementById("editorItinerario");
 
 if (!contenedor) {
@@ -64,7 +64,7 @@ botonEliminar.addEventListener("click", function () {
 
 tarjeta.appendChild(botonEliminar);
 contenedor.appendChild(tarjeta);
-```
+
 
 }
 
@@ -74,7 +74,7 @@ contenedor.appendChild(tarjeta);
 
 function obtenerActividades() {
 
-```
+
 const tarjetas = document.querySelectorAll(
     "#editorItinerario .actividad-editor"
 );
@@ -99,7 +99,7 @@ return Array.from(tarjetas).map(function (tarjeta) {
 }).filter(function (actividad) {
     return actividad.nombre !== "";
 });
-```
+
 
 }
 
@@ -109,7 +109,7 @@ return Array.from(tarjetas).map(function (tarjeta) {
 
 function cargarItinerario() {
 
-```
+
 const contenedor = document.getElementById("editorItinerario");
 
 if (!contenedor) {
@@ -135,7 +135,7 @@ contenedor.replaceChildren();
 actividades.forEach(function (actividad) {
     agregarActividad(actividad);
 });
-```
+
 
 }
 
