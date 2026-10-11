@@ -30,6 +30,28 @@ Desarrollar una plataforma web que permita ofrecer al público invitaciones digi
 * Facilitar la administración de diseños, paquetes e invitaciones.
 * Preparar la plataforma para ofrecer el servicio comercialmente.
 
+
+## Estado actual del prototipo
+
+### Funcionalidades del editor
+
+- [x] Mostrar las actividades iniciales del itinerario.
+- [X] Agregar y eliminar actividades y comprobar su funcionamiento.
+- [X] Editar nombres, horarios y descripciones.
+- [X] Guardar los cambios y verificar que se conserven.
+- [X] Mostrar el itinerario actualizado en la invitación pública.
+- [X] Verificar la vista previa de los datos personalizados.
+
+### Próximas funcionalidades
+
+- [X] Completar el diseño adaptable a celulares.
+- [ ] Implementar la apertura animada del sobre.
+- [ ] Crear un catálogo de diseños.
+- [ ] Implementar enlaces únicos para cada invitación.
+- [ ] Conectar una base de datos.
+- [ ] Implementar la confirmación de asistencia.
+- [ ] Preparar la publicación comercial.
+
 ## 👥 3. Público objetivo
 
 La plataforma estará dirigida a:
@@ -487,7 +509,7 @@ El proyecto se desarrollará progresivamente, comenzando por la experiencia visu
 * [x] Identificación de la necesidad del cliente.
 * [x] Propuesta inicial de tecnologías.
 * [x] Planificación de módulos y fases.
-* [ ] Diseño completo de la página principal.
+* [x] Diseño completo de la página principal.
 * [ ] Catálogo de invitaciones de muestra.
 * [ ] Diseño y animación del sobre digital.
 * [ ] Formulario de personalización.

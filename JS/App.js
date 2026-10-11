@@ -375,7 +375,7 @@ if (datosBoda.fotoGaleria5) {
 
 function mostrarItinerario() {
 
-```
+
 // Buscar el contenedor en index.html
 const contenedor = document.getElementById("itinerarioBoda");
 
@@ -452,7 +452,7 @@ actividades.forEach(function (actividad) {
 
     contenedor.appendChild(tarjeta);
 });
-```
+
 
 }
 
@@ -461,3 +461,36 @@ actividades.forEach(function (actividad) {
 // ==========================================
 
 mostrarItinerario();
+
+
+
+// ==========================================
+// ACTUALIZAR NOMBRES DEL FOOTER
+// ==========================================
+
+function actualizarNombresFooter() {
+
+    // Obtener los datos guardados de la invitación
+    const datosGuardados = localStorage.getItem("datosBoda");
+
+    // Si no hay datos guardados, no hacer nada
+    if (!datosGuardados) {
+        return;
+    }
+
+    // Convertir el texto JSON en un objeto JavaScript
+    const datosBoda = JSON.parse(datosGuardados);
+
+    // Buscar el elemento del footer
+    const nombresFooter = document.getElementById("nombresFooter");
+
+    // Actualizar los nombres si el elemento existe
+    if (nombresFooter) {
+        nombresFooter.textContent =
+            `${datosBoda.novio || "Nombre del Novio"} & ${datosBoda.novia || "Nombre de la Novia"}`;
+    }
+}
+
+// Ejecutar cuando se cargue la página
+document.addEventListener("DOMContentLoaded", actualizarNombresFooter);
+

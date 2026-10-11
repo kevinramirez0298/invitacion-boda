@@ -103,45 +103,67 @@ return Array.from(tarjetas).map(function (tarjeta) {
 
 }
 
-// ==========================================
-// CARGAR ITINERARIO GUARDADO
-// ==========================================
+
+/* ==========================================
+   CARGAR ITINERARIO GUARDADO
+========================================== */
 
 function cargarItinerario() {
+    const contenedor = document.getElementById("editorItinerario");
 
+    if (!contenedor) {
+        console.error("No se encontró editorItinerario en el HTML");
+        return;
+    }
 
-const contenedor = document.getElementById("editorItinerario");
+    let datosGuardados = {};
 
-if (!contenedor) {
-    return;
-}
+    try {
+        datosGuardados = JSON.parse(
+            localStorage.getItem("datosBoda") || "{}"
+        );
+    } catch (error) {
+        console.error("Error al leer los datos guardados:", error);
+    }
 
-let datosGuardados = {};
+    // Usar las actividades guardadas si existen.
+    // Si están vacías, mostrar las cinco actividades iniciales.
+    const actividades =
+        Array.isArray(datosGuardados.itinerario) &&
+        datosGuardados.itinerario.length > 0
+            ? datosGuardados.itinerario
+            : actividadesIniciales;
 
-try {
-    datosGuardados = JSON.parse(
-        localStorage.getItem("datosBoda") || "{}"
+    // Limpiar el editor antes de cargar las actividades.
+    contenedor.replaceChildren();
+
+    // Crear los campos de cada actividad.
+    actividades.forEach(function (actividad) {
+        agregarActividad(actividad);
+    });
+
+    console.log(
+        "Actividades creadas:",
+        contenedor.querySelectorAll(".actividad-editor").length
     );
-} catch (error) {
-    console.error("No se pudieron leer los datos guardados.", error);
 }
 
-const actividades = Array.isArray(datosGuardados.itinerario)
-    ? datosGuardados.itinerario
-    : actividadesIniciales;
+/* ==========================================
+   INICIAR EL EDITOR UNA SOLA VEZ
+========================================== */
 
-contenedor.replaceChildren();
-
-actividades.forEach(function (actividad) {
-    agregarActividad(actividad);
-});
-
-
+function iniciarEditorItinerario() {
+    cargarItinerario();
 }
 
-// Cargar el editor cuando se abra la página
-document.addEventListener("DOMContentLoaded", cargarItinerario);
-
+if (document.readyState === "loading") {
+    document.addEventListener(
+        "DOMContentLoaded",
+        iniciarEditorItinerario
+    );
+} else {
+    iniciarEditorItinerario();
+}
 
 // ==========================================
 // GUARDAR DATOS DE LA INVITACIÓN
@@ -219,10 +241,12 @@ async function guardarInvitacion() {
             document.getElementById("fecha").value,
 
 
+        
         // CIUDAD
+        ciudad: document.getElementById("ciudad").value,
 
-        ciudad:
-            document.getElementById("ciudad").value
+        // ITINERARIO DE LA BODA
+        itinerario: obtenerActividades()
 
     };
 
@@ -322,7 +346,8 @@ async function guardarInvitacion() {
 
     }
 
-}
+    }
+
 
 
 // ==========================================

@@ -617,3 +617,77 @@ header {
     }
 
 }
+
+
+/* ==========================================
+   EDITOR DEL ITINERARIO EN PERSONALIZAR.HTML
+========================================== */
+
+.editor-itinerario {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fffaf5;
+    border: 1px solid #e5d3c5;
+    border-radius: 15px;
+    text-align: left;
+}
+
+#editorItinerario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#editorItinerario .actividad-editor {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d8b6a4;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#editorItinerario .actividad-editor label {
+    display: block;
+    margin-bottom: 12px;
+    color: #4a3b32;
+    font-weight: bold;
+    text-align: left;
+}
+
+#editorItinerario .actividad-editor input {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #cbb8aa;
+    border-radius: 7px;
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#editorItinerario .actividad-editor button {
+    background-color: #a94442;
+    margin-top: 8px;
+}
+
+#editorItinerario .actividad-editor button:hover {
+    background-color: #843534;
+}
+
+@media (max-width: 600px) {
+    .editor-itinerario {
+        padding: 12px;
+    }
+
+    #editorItinerario .actividad-editor {
+        padding: 14px;
+    }
+}
